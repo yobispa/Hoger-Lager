@@ -1,0 +1,30 @@
+body {
+    background-color: purple;
+}
+#wrapper {
+    width: 540;
+    border: 5px solid black;
+}
+.align-center {
+    text-align: center;
+}
+button {
+    position: relative;
+    top: 70px;
+    left: 495px;
+    border-radius: 4px;
+    background-color: #000000;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+button:hover {
+    background-color: blue
+}

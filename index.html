@@ -8,13 +8,29 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
 
-    <body>
+    <body class="FontBody">
+        <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            
          <h1>Higher or Lower</h1>
          <p class="computer-Wins">...</p>
         <p class="computer-Score">Score</p>
          <p class="player-Score">Score</p>
          <p class="player-Wins">...</p>
          <div class="center">
+            <article class="Dice">
+                <img />
+             </article>
         <button class="button computer-button">
             <span class="submit"> Computer gooien </span>
         </button>
@@ -22,6 +38,9 @@
             <span id="demo1"></span>
             <span class="submit">gooien</span>
         </button>
+        <article class = "Dice">
+            <img />
+        </article>
          </div>
          <div class="computerstyle">
          <p>Computer</p>
@@ -36,9 +55,16 @@
          <div class="demostyle">
             <p id="demo2">....</p>
          </div>
-         <audio autoplay loop>
-            <source src="media/Eric Skiff - Underclocked ♫ NO COPYRIGHT 8-bit Music + Background (320 kbps).mp3">
+         <audio id="myAudio" autoplay loop>
+            <source src="media/backgroundmusic.mp3 ">
         </audio>
+        <form class="align-center">
+             <input type="radio" id="Higher" name="fav_language" value="Lower">
+                <label for="Higher">Higher</label><br>
+            <input type="radio" id="Lower" name="fav_language" value="Lower">
+                <label for="Lower">Lower</label><br>
+            </form>
+        </div >
         <script type="application/javascript" src="/js/main.js"></script>
     </body>
 </html>

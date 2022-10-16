@@ -8,6 +8,8 @@ let computerScore = 0;
 let computerWins = 0;
 let playerWins = 0;
 let playerCredit = 5;
+let myMusic = document.getElementById("myAudio");
+myMusic.volume = 0.2;
 
 const computerBtn = document.body.querySelector('.computer-button');
 const playerBtn = document.body.querySelector('.player-button');
@@ -18,8 +20,9 @@ const playerName = prompt ("Wat is je username?. (Minstens 6 letters of nummers)
 document.getElementById("demo").innerHTML = playerName;
 document.getElementById("demo1").innerHTML = playerName;
 
-const ageRestriction= prompt ("Hoe oud ben je?", 18);
 
+  
+function Agecheck () {
 if (ageRestriction > 0 && ageRestriction < 18) {
   alert(`Je bent onder de 18. Jij bent ${ageRestriction} jaar oud.`);
   window.location.href = "tooYoung.html";
@@ -31,7 +34,13 @@ if (ageRestriction > 0 && ageRestriction < 18) {
   window.location.href = "fout.html";
 } else{
   alert(`Je bent ${ageRestriction} jaar oud.`);
-}
+
+  startGame();
+  
+}}
+
+const ageRestriction= prompt ("Hoe oud ben je?", 18);
+Agecheck();
 
 function toggleClass() {
   this.classList.toggle('active');
@@ -39,29 +48,35 @@ function toggleClass() {
   this.classList.add('finished');
 }
 
+function startGame() {
 if (computerBtn) {
   computerBtn.addEventListener('click', function (click) {
     let audio = new Audio('media/mouseclick2.mp3');
-      audio.play();
-    computerDice = Math.floor(Math.random() * 5);
+    audio.play();
+    computerDice = Math.floor(Math.random() * 6);
     computerDice++;
+    let computerDiceImg = 'images/dice' + computerDice + '.png'
+    document.querySelectorAll ('img')[0].setAttribute('src', computerDiceImg);
     console.log(`Computer gooit ${computerDice}`);
     document.getElementById("computer").innerHTML = computerDice;
-  });
-} else {
-  console.log("Computer button not found!");
-}
+    document.querySelector('.computer-button').disabled = true;
+    document.querySelector('.player-button').disabled = false;
+  })};
 
+if (playerBtn) {
 playerBtn.addEventListener("click", function (click) {
   let audio = new Audio('media/mouseclick2.mp3');
-    audio.play();
-  playerDice = Math.floor(Math.random() * 5);
+  audio.play();
+  playerDice = Math.floor(Math.random() * 6);
   playerDice++;
+  let playerDiceImg = 'images/dice' + playerDice + '.png'
+  document.querySelectorAll ('img')[1].setAttribute('src', playerDiceImg);
   console.log(`Speler gooit ${playerDice}`);
   document.getElementById("player").innerHTML = playerDice;
-
+  document.querySelector('.computer-button').disabled = false;
+  document.querySelector('.player-button').disabled = true;
   checkWinner();
-});
+})};
 
 function checkWinner(){
  if (playerDice > computerDice) {
@@ -88,6 +103,7 @@ function checkWinner(){
   console.log(`De computer gooit hoger. De computer gooit ${computerDice}. ${playerName} heeft ${playerDice} gegooit.`);
   computerScore = computerScore +  1;
   document.querySelector(".computer-Score").innerText = (`Computer Score = ${computerScore}`);
+  
  
   if (computerScore >= y){
     const audio = new Audio('media/victory.mp3');
@@ -103,11 +119,28 @@ function checkWinner(){
     playerCredit = playerCredit - 1; 
     console.log(`credit is ${playerCredit}`)
    };
+
 } else{
   document.getElementById("demo2").innerText = ("Draw")
   console.log("Draw");
-}};
-// }};
-// while (playerCredit == thisNummer){
-//   alert("Game over.")
-// }
+}}};
+
+let higher = document.getElementById('Higher') 
+if (higher) {
+  higher.addEventListener('click', function (click) {
+  higher = true;
+  console.log(higher)
+  while (higher == true){
+  if (playerDice > computerDice){
+    console.log('Je hebt gewonnen')
+  }else {
+    console.log('Je bent verloren')
+    
+  }
+  return higher;
+}
+  })};
+
+
+
+

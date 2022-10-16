@@ -283,6 +283,8 @@ h1 {
   font-size: 20px;
 }
 .Dice {
+  margin-left: 115px;
+  margin-right: 115px;
   height: 120px;
   width: 120px;
   border-radius: 20px;

@@ -21,7 +21,6 @@ document.getElementById("demo").innerHTML = playerName;
 document.getElementById("demo1").innerHTML = playerName;
 
 
-  
 function Agecheck () {
 if (ageRestriction > 0 && ageRestriction < 18) {
   alert(`Je bent onder de 18. Jij bent ${ageRestriction} jaar oud.`);

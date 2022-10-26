@@ -145,12 +145,13 @@ h1 {
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 28px;
+  font-size: 18px;
   padding: 20px;
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  margin-left: 820px;
 }
 .button-left span {
   cursor: pointer;
@@ -182,12 +183,14 @@ h1 {
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 28px;
+  font-size: 18px;
   padding: 20px;
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  margin-top: 40px;
+  margin-left: 5px;
 }
 .button span {
   cursor: pointer;
@@ -224,22 +227,35 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 200px;
-  border: 5px solid blue;
+  width: 50%;
+  border: 5px solid lightblue;
+}
+.center-right {
+position: fixed;
+top: 86.5px;
+margin-left: 49%;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 200px;
+width: 50%;
+border: 5px solid lightblue;
 }
 .playerstyle {
   text-align: right;
   position: fixed;
-  top: 320px;
+  top: 450px;
   right: 20px;
 }
-.demostyle {
-  margin-top: 20px;
+.displayGameStyle {
+  margin-top: 0px;
+  font-size: x-large;
   text-align: center;
 }
 .computerstyle {
   text-align: left;
   position: fixed;
-  top: 320px;
+  top: 450px;
   left: 20px;
 }
 .player-Score {
@@ -282,12 +298,29 @@ h1 {
 .fontStyle {
   font-size: 20px;
 }
-.Dice {
-  margin-left: 115px;
-  margin-right: 115px;
+.computer-Dice {
+  margin-left: 50px;
+  margin-right: 50px;
   height: 120px;
   width: 120px;
   border-radius: 20px;
   background-color: white;
 }
+.player-Dice {
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
+  background-color: white;
+}
+.radioCustom {
+  font-size: 18px;
+}
+input[type='radio'] {
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+}
+
 

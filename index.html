@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Higher or Lower</title>
         <link rel="stylesheet" href="css/style.css">
+        <!-- <meta http-equiv="refresh" content="30"> -->
     </head>
 
     <body class="FontBody">
@@ -24,46 +25,53 @@
             
          <h1>Higher or Lower</h1>
          <p class="computer-Wins">...</p>
-        <p class="computer-Score">Score</p>
-         <p class="player-Score">Score</p>
+        <p class="computer-Score"></p>
+         <p class="player-Score"></p>
          <p class="player-Wins">...</p>
          <div class="center">
-            <article class="Dice">
+            <article class="computer-Dice">
                 <img />
              </article>
-        <button class="button computer-button">
-            <span class="submit"> Computer gooien </span>
-        </button>
-        <button class="button-left player-button">
-            <span id="demo1"></span>
-            <span class="submit">gooien</span>
-        </button>
-        <article class = "Dice">
+             <article class="computer-Dice">
+                <img />
+             </article>
+            </div>
+        <div class="center-right">
+        <article class = "player-Dice">
             <img />
         </article>
+        <article class="player-Dice">
+            <img />
+         </article>
          </div>
+         <button class="button computer-button">
+            <span class="submit"> Computer gooien </span>
+        </button>
+         <button class="button-left player-button">
+            <span class="submit" id="demo"></span>
+        </button>
          <div class="computerstyle">
          <p>Computer</p>
          <p>gooit:</p>
          <p id="computer">....</p>
         </div>
          <div class="playerstyle">
-            <p id="demo"></p>
+            <p id="demo1"></p>
             <p>gooit:</p>
             <p id="player">....</p>
          </div>
-         <div class="demostyle">
-            <p id="demo2">....</p>
-         </div>
+            <p class="playerCredits"></p>
+            <p class="displayGame displayGameStyle">....</p>
+    
          <audio id="myAudio" autoplay loop>
-            <source src="media/backgroundmusic.mp3 ">
+            <source src="media/ariamath.mp3 ">
         </audio>
-        <form class="align-center">
-             <input type="radio" id="Higher" name="fav_language" value="Lower">
-                <label for="Higher">Higher</label><br>
-            <input type="radio" id="Lower" name="fav_language" value="Lower">
-                <label for="Lower">Lower</label><br>
-            </form>
+        <form class="align-center radioCustom">
+             <input type="radio" class="higher" name="hogerlager" value="higher">
+                <label for="higher">Higher</label><br>
+            <input type="radio" class="lower" name="hogerlager" value="lower" >
+                <label for="lower">Lower</label><br>
+        </form>
         </div >
         <script type="application/javascript" src="/js/main.js"></script>
     </body>

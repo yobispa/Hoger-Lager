@@ -1,17 +1,28 @@
-body {
-    background-color: purple;
-}
+@keyframes color {
+    0%   { background: #33CCCC; }
+    20%  { background: #33CC36; }
+    40%  { background: #B8CC33; }
+    60%  { background: #FCCA00; }
+    80%  { background: #33CC36; }
+    100% { background: #33CCCC; }
+  }
+  
+  body {
+    background: #33CCCC;
+    animation: color 9s infinite linear;
+  }
 #wrapper {
     width: 540;
     border: 5px solid black;
 }
-.align-center {
+h1 {
+    font-family: 'Kavoon', sans-serif;
     text-align: center;
 }
 button {
     position: relative;
-    top: 70px;
-    left: 495px;
+    top: 85px;
+    left: 515px;
     border-radius: 4px;
     background-color: #000000;
     border: none;

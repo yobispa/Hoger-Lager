@@ -3,8 +3,8 @@ const thisNummer = 0;
 let y = 10;
 let computerDice = 0;
 let playerDice = 0;
-let playerScore = 0;
-let computerScore = 0;
+let playerScore = 9;
+let computerScore = 9;
 let computerWins = 0;
 let playerWins = 0;
 let playerCredit = prompt ("hoeveel credits wil je", 5);
@@ -27,7 +27,7 @@ document.querySelector(".computer-Score").innerHTML = (`Computer Score = ${compu
 document.getElementById("demo").innerHTML = `${playerName} gooien`;
 document.getElementById("demo1").innerHTML = playerName;
 document.querySelector('.playerCredits').innerHTML = `${playerName} credits zijn ${playerCredit}`
-
+maximumCreditReached()
 
 if (playerBtn) {
   playerBtn.addEventListener('click', playerButtonAction);
@@ -35,6 +35,14 @@ if (playerBtn) {
 
 if (computerBtn) {
   computerBtn.addEventListener('click', computerButtonAction);
+}
+
+function maximumCreditReached() {
+  while (playerCredit > 20) {
+    let maximaleCreditReached = prompt ("Het maximale score is 20", 5)
+    playerCredit = maximaleCreditReached
+    document.querySelector('.playerCredits').innerHTML = `${playerName} credits zijn ${playerCredit}`
+ }
 }
 
 function Agecheck () {
@@ -190,16 +198,8 @@ function scoreReset() {
 
 function creditsResetGame() {
   while ( playerCredit < 1 ) {
-    playerCredit = prompt (`Je hebt ${playerCredit} credits. Voeg meer als je weer spelen.`)
+    playerCredit = prompt (`Je hebt ${playerCredit} credits. Voeg meer als je wil weer spelen.`)
     document.querySelector('.playerCredits').innerHTML = `${playerName} credits zijn ${playerCredit}`
+    maximumCreditReached()
   }
 }
-
-
-  
-
-
-
-
-
-

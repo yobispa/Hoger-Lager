@@ -151,7 +151,9 @@ h1 {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  margin-left: 820px;
+  position: fixed;
+  margin-top: 40px;
+  left: 89%;
 }
 .button-left span {
   cursor: pointer;

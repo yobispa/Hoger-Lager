@@ -7,13 +7,12 @@ let playerScore = 0;
 let computerScore = 0;
 let computerWins = 0;
 let playerWins = 0;
-// let playerCredit;
+let playerCredit = prompt ("hoeveel credits wil je", 5);
 let myMusic = document.getElementById("myAudio");
 myMusic.volume = 0.050;
 
 let higher = document.querySelector('.higher');
 let lower = document.querySelector('.lower');
-let draw = document.querySelector('.draw');
 
 const computerBtn = document.body.querySelector('.computer-button')
 const playerBtn = document.body.querySelector('.player-button');
@@ -27,7 +26,7 @@ document.querySelector(".player-Score").innerText = (`${playerName} score  = ${p
 document.querySelector(".computer-Score").innerHTML = (`Computer Score = ${computerScore}`);
 document.getElementById("demo").innerHTML = `${playerName} gooien`;
 document.getElementById("demo1").innerHTML = playerName;
-// document.querySelector('.playerCredits').innerHTML = `${playerName} credits zijn ${playerCredit}`
+document.querySelector('.playerCredits').innerHTML = `${playerName} credits zijn ${playerCredit}`
 
 
 if (playerBtn) {
@@ -110,6 +109,7 @@ function playerButtonAction() {
   }
 
   scoreReset()
+  creditsResetGame()
 }
 
 function checkHigher() {
@@ -185,6 +185,13 @@ function scoreReset() {
     alert(`Computer heeft gewonnen!!!. Scores worden gereset.`)
     computerWins++;
     document.querySelector(".computer-Wins").innerText = (`Computer wins : ${computerWins}`)
+  }
+}
+
+function creditsResetGame() {
+  while ( playerCredit < 1 ) {
+    playerCredit = prompt (`Je hebt ${playerCredit} credits. Voeg meer als je weer spelen.`)
+    document.querySelector('.playerCredits').innerHTML = `${playerName} credits zijn ${playerCredit}`
   }
 }
 

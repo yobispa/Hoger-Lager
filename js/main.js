@@ -7,7 +7,7 @@ let playerScore = 0;
 let computerScore = 0;
 let computerWins = 0;
 let playerWins = 0;
-let playerCredit = prompt ("hoeveel credits wil je", 5);
+let playerCredit = prompt ("hoeveel credits wil je inzetten", 5);
 let myMusic = document.getElementById("myAudio");
 myMusic.volume = 0.050;
 
@@ -39,7 +39,7 @@ if (computerBtn) {
 
 function maximumCreditReached() {
   while (playerCredit > 20) {
-    let maximaleCreditReached = prompt ("Het maximale score is 20", 5)
+    let maximaleCreditReached = prompt ("Het maximale credit die je kan inzetten is 20", 5)
     playerCredit = maximaleCreditReached
     document.querySelector('.playerCredits').innerHTML = `${playerName} credits zijn ${playerCredit}`
  }

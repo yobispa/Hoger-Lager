@@ -106,7 +106,7 @@ function playerButtonAction() {
     checkLower()
 
   } else {
-    document.querySelector('.displayGame').innerHTML = "Kies higher of lower!!"
+    document.querySelector('.displayGame').innerHTML = "Kies hoger of lager!!"
   }
 
   scoreReset()
@@ -116,21 +116,21 @@ function checkHigher() {
   
     lower.checked = false;
 
-    if (computerDice < playerDice) {
-      console.log('Je hebt Gewonnen')
-      playerScore = playerScore + 1;
-      document.querySelector(".displayGame").innerHTML = (`${playerName} heeft gewonnen.`)
-      document.querySelector(".player-Score").innerText = (`${playerName} score  = ${playerScore}`);
-      
-    } else if (playerDice < computerDice) {
-      console.log('Je hebt verloren!') 
-      computerScore = computerScore + 1;
-      document.querySelector(".displayGame").innerHTML = (`De computer heeft gewonnen.`)
-      document.querySelector(".computer-Score").innerHTML = (`Computer Score = ${computerScore}`);
-      
-    } else {
-      console.log('Draw')
-      document.querySelector(".displayGame").innerHTML = (`Draw`)
+  if (computerDice < playerDice) {
+    console.log('Je hebt Gewonnen')
+    playerScore = playerScore + 1;
+    document.querySelector(".displayGame").innerHTML = (`${playerName} heeft gewonnen.`)
+    document.querySelector(".player-Score").innerText = (`${playerName} score  = ${playerScore}`);
+    
+  } else if (playerDice < computerDice) {
+    console.log('Je hebt verloren!') 
+    computerScore = computerScore + 1;
+    document.querySelector(".displayGame").innerHTML = (`De computer heeft gewonnen.`)
+    document.querySelector(".computer-Score").innerHTML = (`Computer Score = ${computerScore}`);
+    
+  } else {
+    console.log('Draw')
+    document.querySelector(".displayGame").innerHTML = (`Draw`)
   }
 }
 
@@ -139,20 +139,20 @@ function checkLower() {
   higher.checked = false;
 
   if (computerDice > playerDice) {
-      console.log('Je hebt gewonnen')
-      playerScore = playerScore + 1;
-      document.querySelector(".player-Score").innerText = (`${playerName} score  = ${playerScore}`);
-      document.querySelector(".displayGame").innerHTML = (`${playerName} heeft gewonnen.`)
+    console.log('Je hebt gewonnen')
+    playerScore = playerScore + 1;
+    document.querySelector(".player-Score").innerText = (`${playerName} score  = ${playerScore}`);
+    document.querySelector(".displayGame").innerHTML = (`${playerName} heeft gewonnen.`)
 
-    } else if (playerDice > computerDice) {
-      console.log('Je hebt verloren')
-      computerScore = computerScore + 1;
-      document.querySelector(".displayGame").innerHTML = (`De computer heeft gewonnen.`)
-      document.querySelector(".computer-Score").innerHTML = (`Computer Score = ${computerScore}`);
+  } else if (playerDice > computerDice) {
+    console.log('Je hebt verloren')
+    computerScore = computerScore + 1;
+    document.querySelector(".displayGame").innerHTML = (`De computer heeft gewonnen.`)
+    document.querySelector(".computer-Score").innerHTML = (`Computer Score = ${computerScore}`);
 
-    } else {
-      console.log('Draw')
-      document.querySelector(".displayGame").innerHTML = (`Draw`)
+  } else {
+    console.log('Draw')
+    document.querySelector(".displayGame").innerHTML = (`Draw`)
   }
 }
 

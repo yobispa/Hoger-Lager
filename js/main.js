@@ -1,8 +1,8 @@
 console.log("Game started!");
 const thisNummer = 0;
 let y = 10;
-let computerDice = 0;
-let playerDice = 0;
+let computerDice;
+let playerDice;
 let playerScore = 0;
 let computerScore = 0;
 let computerWins = 0;
